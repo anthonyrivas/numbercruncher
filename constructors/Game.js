@@ -7,7 +7,7 @@ function Game() {
 }
 
 Game.prototype.generateRandomNumber = function() {
-  this.num = Math.floor(Math.random() * 5);
+  this.num = Math.floor(Math.random() * 5) + 1;
 }
 
 Game.prototype.start = function() {
@@ -52,10 +52,10 @@ Game.prototype.getUserInput = function() {
     {
       name: 'userChoice',
       type: 'number',
-      message: 'Please choose a whole number 0 - 5',
+      message: 'Please choose a whole number 1 - 5',
       validate: function(num) {
-        if (num > 5 || num < 0 || parseInt(num) !== num) {
-          return 'Number must be an integer from 0 - 5'
+        if (num > 5 || num < 1 || parseInt(num) !== num) {
+          return 'Number must be an integer from 1 - 5'
         }
         return true
       }
