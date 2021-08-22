@@ -20,7 +20,7 @@ Game.prototype.reset = function() {
   this.getUserInput();
 }
 
-Game.prototype.checkForVicotry = function(userSelection) {
+Game.prototype.checkForVictory = function(userSelection) {
   if (userSelection === this.num) {
     this.wins++;
   } else {
@@ -62,7 +62,7 @@ Game.prototype.getUserInput = function() {
     }
   ])
   .then(({userChoice}) => {
-    this.checkForVicotry(userChoice);
+    this.checkForVictory(userChoice);
     this.displayCurrentScore();
     this.checkIfDone();
   })
